@@ -6,9 +6,16 @@
       <p>Este es un servicio gratuito de <span class="txt-blue">todolegal</span></p>
     </section>
     <section class="section">
+      <p>Carga de Documentos</p>
+      <p>Sube tus documentos y ordénalos</p>
+      <FileUpload />
     </section>
   </main>
 </template>
+
+<script setup>
+import FileUpload from '../FileUpload/FileUpload.vue'
+</script>
 
 <style scoped>
 .step-1 {
