@@ -2,9 +2,12 @@
   border-radius: 8px;
   background: #fff;
   gap: 30px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-inline: auto;
+  max-inline-size: 1200px;
 }
 
 .stepper-list {

@@ -1,10 +1,23 @@
 <template>
-  <HeaderStepper />
-  <main>
-
+  <main class="stepper-container">
+    <HeaderStepper />
+    <main>
+      <StepOne />
+    </main>
   </main>
 </template>
 
 <script setup>
 import HeaderStepper from './HeaderStepper.vue';
+import StepOne from './steps/StepOne.vue'
 </script>
+
+<style scoped>
+.stepper-container {
+  gap: 30px;
+  display: flex;
+  margin-block-start: 30px;
+  justify-content: center;
+  flex-direction: column;
+}
+</style>
