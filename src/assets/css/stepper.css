@@ -3,6 +3,7 @@
   background: #fff;
   gap: 30px;
   width: 100%;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,5 +20,25 @@
 }
 
 .stepper-list li {
+  gap: 10px;
+  display: flex;
+  align-items: center;
   list-style: none;
+}
+
+.step-circle {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  color: blue;
+  border: 1px solid blue;
+}
+
+.step-circle.step-active {
+  background: blue;
+  color: white;
 }
