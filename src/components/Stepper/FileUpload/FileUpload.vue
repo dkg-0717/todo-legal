@@ -8,20 +8,13 @@
         {{ file.name }}
       </li>
     </ul>
-    <button>Siguiente</button>
   </section>
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia';
-import { useStepperStore } from '@/stores/stepper';
 import { ref } from 'vue'
 
 let files = ref([])
-const stepperStore = useStepperStore()
-const { index } = storeToRefs(stepperStore)
-
-console.log(index.value)
 
 const filesSaved = (evtType, evt) => {
   evt.preventDefault();

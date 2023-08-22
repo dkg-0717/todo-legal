@@ -3,7 +3,7 @@
     <section>
       <img src="" alt="">
     </section>
-    <section>
+    <section class="title-menu-container">
       <p class="header-title">Smart <span class="txt-blue">Contracts</span> Suite</p>
       <img src="" alt="">
     </section>

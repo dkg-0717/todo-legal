@@ -6,7 +6,7 @@
         <p class="step-circle" :class="{ 'step-active': index == idx }">
           {{ idx + 1 }}
         </p>
-        <p>{{ option }}</p>
+        <p class="txt-step" :class="{ 'txt-step-active': index == idx }">{{ option }}</p>
       </li>
     </ul>
   </section>

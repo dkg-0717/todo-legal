@@ -10,3 +10,8 @@ header {
   margin: 0;
   font-weight: bold;
 }
+
+.title-menu-container {
+  gap: 30px;
+  display: flex;
+}

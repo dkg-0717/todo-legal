@@ -1,7 +1,7 @@
 <template>
   <main class="stepper-container">
     <HeaderStepper />
-    <main>
+    <main class="main-stepper">
       <StepOne />
     </main>
   </main>
@@ -19,5 +19,11 @@ import StepOne from './steps/StepOne.vue'
   margin-block-start: 30px;
   justify-content: center;
   flex-direction: column;
+}
+
+.main-stepper {
+  width: 100%;
+  margin-inline: auto;
+  max-inline-size: 1500px;
 }
 </style>

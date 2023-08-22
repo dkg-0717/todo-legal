@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  font-family: system-ui;
   background: linear-gradient(#fff, #9198e5);
 }
 
@@ -15,4 +16,12 @@ p {
 
 .txt-blue {
   color: blue;
+}
+
+.txt-light-gray {
+  color: lightgray;
+}
+
+.txt-center {
+  text-align: center;
 }
