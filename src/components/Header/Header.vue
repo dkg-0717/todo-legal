@@ -4,7 +4,7 @@
       <img src="" alt="">
     </section>
     <section>
-      <p></p>
+      <p class="header-title">Smart <span class="txt-blue">Contracts</span> Suite</p>
       <img src="" alt="">
     </section>
   </header>
@@ -15,5 +15,5 @@
 </script>
 
 <style>
-@import url('../../assets/css/header/header.css');
+@import url('../../assets/css/header.css');
 </style>
