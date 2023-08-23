@@ -18,8 +18,8 @@
       <li class="pdf-file-item">
         <img src="../../../assets/images/plus-icon.svg" alt="">
         <button :class="{ 'txt-blue': files.length <= 5, 'txt-gray': files.length >= 5 }"
-          class="txt-blue btn-add-new pointer" @click="inputRef" :disabled="files.length == 5">Añadir más
-          documentos</button>
+          class="txt-blue btn-add-new pointer" @click="inputRef" :disabled="files.length == 5">
+          Añadir más documentos</button>
         <section>
           <p class="txt-blue txt-max">5 Max</p>
           <p class="txt-blue txt-max">20 Mb</p>

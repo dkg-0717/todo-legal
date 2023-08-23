@@ -58,3 +58,21 @@
 .txt-step.txt-step-active {
   color: var(--lightBlue);
 }
+
+@media (max-width: 1390px) {
+  .header-stepper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1060px) {
+  .header-stepper {
+    padding: 2.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-stepper {
+    display: none;
+  }
+}

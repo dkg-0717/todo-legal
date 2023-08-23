@@ -89,3 +89,15 @@
 .file {
   display: none;
 }
+
+@media (max-width: 600px) {
+
+  .fileupload_container,
+  .files_uploaded_container {
+    margin-block-start: 2.5rem;
+  }
+
+  .txt-drop-files {
+    display: none;
+  }
+}

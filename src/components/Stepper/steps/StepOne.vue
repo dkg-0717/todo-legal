@@ -8,8 +8,8 @@
     <section class="section section-2">
       <section>
         <p class="txt-upload-docs">
-          <img @click="removeFiles" src="../../../assets/images/icon-navigation.svg" v-show="hasFiles"> Carga de
-          Documentos
+          <img @click="removeFiles" src="../../../assets/images/icon-navigation.svg" v-show="hasFiles">
+          Carga de Documentos
         </p>
         <p class="txt-docs-ordered">Sube tus documentos y ordénalos</p>
       </section>
@@ -91,5 +91,51 @@ const removeFiles = () => {
   font-size: 2.8rem;
   margin-block-start: 55px;
   color: var(--minusLightGray);
+}
+
+@media (max-width: 900px) {
+  .step-1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .txt-free-service {
+    display: none;
+  }
+
+  .section-1 {
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 1.0rem 3.0rem;
+    justify-content: space-around;
+  }
+
+  .section .next-button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+
+  .txt-how-works {
+    order: 1;
+    font-size: 1.8rem;
+  }
+
+  .desktop-image {
+    max-width: 11.0rem;
+    margin-block-start: 0;
+  }
+
+  .txt-upload-docs {
+    font-size: 1.8rem;
+  }
+
+  .txt-docs-ordered {
+    font-size: 1.4rem;
+  }
 }
 </style>
