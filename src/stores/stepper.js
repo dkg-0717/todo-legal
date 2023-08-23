@@ -14,6 +14,10 @@ export const useStepperStore = defineStore('stepper', {
     },
     setCanAddFiles(value) {
       this.canAddFiles = value
+    },
+    setIncrementIndex() {
+      console.log('--- increment ---')
+      this.index = this.index + 1
     }
   }
 

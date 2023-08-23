@@ -14,7 +14,7 @@
         <p class="txt-docs-ordered">Sube tus documentos y ordénalos</p>
       </section>
       <FileUpload />
-      <button class="next-button">Siguiente</button>
+      <button class="next-button" @click="stepperStore.setIncrementIndex()">Siguiente</button>
     </section>
   </main>
 </template>
@@ -91,19 +91,5 @@ const removeFiles = () => {
   font-size: 2.8rem;
   margin-block-start: 55px;
   color: var(--minusLightGray);
-}
-
-.next-button {
-  border: 0;
-  color: #fff;
-  display: block;
-  cursor: pointer;
-  font-size: 2.4rem;
-  font-weight: bold;
-  border-radius: 8px;
-  background: var(--lightBlueBtn);
-  padding: 25px 104px;
-  margin-inline: auto;
-  margin-block-start: 170px;
 }
 </style>

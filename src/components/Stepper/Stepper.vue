@@ -2,14 +2,34 @@
   <main class="stepper-container">
     <HeaderStepper />
     <main class="main-stepper">
-      <StepOne />
+      <component :is="renderStep" />
     </main>
   </main>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { storeToRefs } from 'pinia';
+import { useStepperStore } from '@/stores/stepper';
+
 import HeaderStepper from './HeaderStepper.vue';
 import StepOne from './steps/StepOne.vue'
+import StepTwo from './steps/StepTwo.vue'
+import StepThree from './steps/StepThree.vue'
+
+const stepperStore = useStepperStore()
+const { index } = storeToRefs(stepperStore)
+
+const stepsComponents = {
+  0: StepOne,
+  1: StepTwo,
+  2: StepThree
+}
+
+const renderStep = computed(() => {
+  return stepsComponents[index.value]
+})
+
 </script>
 
 <style scoped>
