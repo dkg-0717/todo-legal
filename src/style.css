@@ -7,6 +7,8 @@ html {
 }
 
 :root {
+  --danger: #FF2B56;
+  --borderGray: #DAE2EF;
   --fuBgGray: #F4F6FC;
   --minusLightGray: #8E8E8E;
   --lightGray: #5E5E5E;
@@ -29,8 +31,22 @@ p {
   margin: 0;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .txt-blue {
   color: var(--blue);
+}
+
+.txt-gray {
+  color: var(--borderGray);
+}
+
+.txt-danger {
+  font-size: 1.6rem;
+  color: var(--danger);
+  margin-block-start: 1.8rem;
 }
 
 .txt-light-gray {

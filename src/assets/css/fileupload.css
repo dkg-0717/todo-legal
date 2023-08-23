@@ -1,4 +1,5 @@
-.fileupload_container {
+.fileupload_container,
+.files_uploaded_container {
   padding: 43px 10px;
   background: var(--fuBgGray);
   display: flex;
@@ -7,17 +8,82 @@
   flex-direction: column;
   border: 4px dashed var(--blueBorder);
   max-inline-size: 500px;
+  width: 100%;
   margin-inline: auto;
 }
 
 .txt-drop-files {
   font-size: 1.6rem;
+  margin-block-start: 3.6rem;
+}
+
+.btn-add-new {
+  border: 0;
+  height: 100%;
+  font-size: 2.2rem;
+  padding: 0 1.8rem;
+  background: transparent;
+  border-left: 1px solid var(--borderGray);
+  border-right: 1px solid var(--borderGray);
+}
+
+.txt-max {
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
 .txt-find-files {
   cursor: pointer;
   color: var(--blueBorder);
   text-decoration: underline;
+}
+
+.upload-image {
+  margin-inline: auto;
+  object-fit: contain;
+  max-width: 10.0rem;
+  width: 100%;
+  height: 9.5rem;
+}
+
+.pdf_items_container {
+  gap: 1.0rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-file-item {
+  gap: 3.0rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-radius: 0.8rem;
+  align-items: center;
+  background: #fff;
+  padding: 1.0rem 4.0rem 1.0rem 2.2rem;
+}
+
+.pdf-item-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 2.2rem;
+  padding: 0 1.8rem;
+  border-left: 1px solid var(--borderGray);
+  border-right: 1px solid var(--borderGray);
+  color: var(--minusLightGray);
+}
+
+.move-icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.trash-icon {
+  width: 2.5rem;
+  height: 3.2rem;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .file {
