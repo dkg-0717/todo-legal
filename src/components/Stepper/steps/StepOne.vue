@@ -18,20 +18,21 @@
       <div class="buttons_container">
         <button class="back-button pointer" @click="stepperStore.setHasFiles(false)"
           v-if="hasFiles && mqLarge.matches">Regresar</button>
-        <button class="next-button pointer" @click="saveData">Siguiente</button>
+        <button class="next-button pointer" @click="saveData">{{ buttonTxt }}</button>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { storeToRefs } from 'pinia';
 import { useStepperStore } from '@/stores/stepper';
 import { saveUserData } from '@/services/webhook';
 import FileUpload from '../FileUpload/FileUpload.vue';
 
+let buttonTxt = ref('Siguiente')
 const mqLarge = window.matchMedia('(max-width: 600px)');
-
 const stepperStore = useStepperStore()
 const { hasFiles } = storeToRefs(stepperStore)
 
@@ -40,7 +41,9 @@ const removeFiles = () => {
 }
 
 const saveData = async () => {
+  buttonTxt.value = 'Cargando...'
   const webResponse = await saveUserData()
+  buttonTxt.value = 'Siguiente'
   console.log(webResponse)
 }
 
