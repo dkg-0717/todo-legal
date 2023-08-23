@@ -8,13 +8,18 @@
     <section class="section section-2">
       <section>
         <p class="txt-upload-docs">
-          <img @click="removeFiles" src="../../../assets/images/icon-navigation.svg" v-show="hasFiles">
+          <img class="remove-files-image" @click="removeFiles" src="../../../assets/images/icon-navigation.svg"
+            v-show="hasFiles">
           Carga de Documentos
         </p>
         <p class="txt-docs-ordered">Sube tus documentos y ordénalos</p>
       </section>
       <FileUpload />
-      <button class="next-button" @click="stepperStore.setIncrementIndex()">Siguiente</button>
+      <div class="buttons_container">
+        <button class="back-button pointer" @click="stepperStore.setHasFiles(false)"
+          v-if="hasFiles && mqLarge.matches">Regresar</button>
+        <button class="next-button pointer" @click="stepperStore.setIncrementIndex()">Siguiente</button>
+      </div>
     </section>
   </main>
 </template>
@@ -23,6 +28,8 @@
 import { storeToRefs } from 'pinia';
 import { useStepperStore } from '@/stores/stepper';
 import FileUpload from '../FileUpload/FileUpload.vue'
+
+const mqLarge = window.matchMedia('(max-width: 600px)');
 
 const stepperStore = useStepperStore()
 const { hasFiles } = storeToRefs(stepperStore)
@@ -58,6 +65,7 @@ const removeFiles = () => {
   justify-content: space-around;
   flex-direction: column;
 }
+
 
 .desktop-image {
   max-width: 700px;
@@ -117,11 +125,42 @@ const removeFiles = () => {
     justify-content: space-around;
   }
 
-  .section .next-button {
+  .section-2 {
+    padding: 1.8rem 2.0rem 2.7rem;
+  }
+
+  .section .buttons_container {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
+    border-radius: 0;
+  }
+
+  .buttons_container {
+    display: flex;
+    border: 1px solid var(--lightBlue);
+
+    .back-button,
+    .next-button {
+      border: 0;
+      font-size: 1.4rem;
+      border-radius: 0;
+      padding: 1.8rem 4.6rem;
+    }
+
+    .back-button {
+      color: var(--lightBlue);
+      flex-grow: 1;
+    }
+
+    .next-button {
+      flex-grow: 1;
+    }
+  }
+
+  .section .next-button {
+    margin-block-start: 0;
     border-radius: 0;
   }
 
@@ -141,6 +180,10 @@ const removeFiles = () => {
 
   .txt-docs-ordered {
     font-size: 1.4rem;
+  }
+
+  .remove-files-image {
+    display: none;
   }
 }
 </style>

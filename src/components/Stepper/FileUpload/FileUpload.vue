@@ -1,7 +1,8 @@
 <template>
-  <section class="fileupload_container" @dragover="$event => $event.preventDefault()" @drop="filesSaved('drag', $event)"
-    v-show="files.length == 0">
-    <img class="upload-image" src="../../../assets/images/upload.png" alt="">
+  <section class="fileupload_container" :class="{ 'over-bg': isOver }" @dragover="setColorContainer"
+    @dragleave="isOver = false" @drop="filesSaved('drag', $event)" v-show="files.length == 0">
+    <img class="upload-image pointer" src="../../../assets/images/upload.png" alt="Imagen para subir archivos"
+      @click="inputRef">
     <p class="txt-drop-files txt-center">Arrastra y suelta tus documentos aquí o <span class="txt-find-files"
         @click="inputRef">Buscar
         Archivo.</span></p>
@@ -9,6 +10,8 @@
       @change="filesSaved('input', $event)">
   </section>
   <section class="files_uploaded_container" v-if="files.length != 0">
+    <img class="upload-image pointer" src="../../../assets/images/upload.png" alt="Imagen para subir archivos"
+      @click="inputRef">
     <ul class="pdf_items_container" v-if="files.length > 0">
       <li class="pdf-file-item" v-for="(file, index) in files">
         <img class="move-icon" src="../../../assets/images/upload-move-icon.png" />
@@ -35,6 +38,7 @@ import { storeToRefs } from 'pinia';
 import { useStepperStore } from '@/stores/stepper';
 import { ref, watch } from 'vue'
 
+let isOver = ref(false)
 let showAlert = ref(false)
 let files = ref([])
 let input = ref(null)
@@ -72,6 +76,11 @@ const removeFile = (index) => {
 
 const inputRef = () => {
   input.value.click()
+}
+
+const setColorContainer = ($event) => {
+  $event.preventDefault()
+  isOver.value = true
 }
 
 </script>

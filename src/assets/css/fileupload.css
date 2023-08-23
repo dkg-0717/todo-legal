@@ -12,9 +12,17 @@
   margin-inline: auto;
 }
 
+.files_uploaded_container .upload-image {
+  display: none;
+}
+
 .txt-drop-files {
   font-size: 1.6rem;
   margin-block-start: 3.6rem;
+}
+
+.over-bg {
+  background: rgba(58, 119, 236, 0.5);
 }
 
 .btn-add-new {
@@ -97,7 +105,42 @@
     margin-block-start: 2.5rem;
   }
 
+  .files_uploaded_container {
+    padding: 2.0rem 1.3rem 4.0rem;
+  }
+
+  .files_uploaded_container .upload-image {
+    display: block;
+  }
+
+  .pdf_items_container {
+    margin-block-start: 2.0rem;
+    margin-block-end: 0;
+  }
+
   .txt-drop-files {
     display: none;
   }
+
+  .pdf-item-name {
+    font-size: 1.4rem;
+    border-right: none;
+    padding: 0 1.2rem;
+  }
+
+  .btn-add-new {
+    padding: 0;
+    font-size: 1.2rem;
+    border-right: none;
+  }
+
+  .txt-max {
+    font-size: 1.1rem;
+  }
+
+  .pdf-file-item {
+    gap: 1.3rem;
+    padding: 1.0rem;
+  }
+
 }
