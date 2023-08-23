@@ -16,6 +16,7 @@ import StepOne from './steps/StepOne.vue'
 .stepper-container {
   gap: 30px;
   display: flex;
+  padding: 0 1.9rem 9.0rem;
   margin-block-start: 30px;
   justify-content: center;
   flex-direction: column;

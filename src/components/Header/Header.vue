@@ -1,11 +1,11 @@
 <template>
   <header>
     <section>
-      <img src="" alt="">
+      <img class="todo-legal-image" src="../../assets/images/todo-legal.svg" alt="Icono de todo legal">
     </section>
     <section class="title-menu-container">
-      <p class="header-title">Smart <span class="txt-blue">Contracts</span> Suite</p>
-      <img src="" alt="">
+      <img src="../../assets/images/scs-logo.svg" alt="Imagen smart contracts suite">
+      <img class="icon-menu-image" src="../../assets/images/icon-menu.png" alt="Icono de menú">
     </section>
   </header>
 </template>

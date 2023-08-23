@@ -1,8 +1,8 @@
 header {
-  padding: 10px 20px;
   display: flex;
   background: #fff;
   align-items: center;
+  padding: 2.0rem 5.0rem;
   justify-content: space-between;
 }
 
@@ -11,7 +11,19 @@ header {
   font-weight: bold;
 }
 
+.todo-legal-image {
+  max-width: 20.0rem;
+  width: 100%;
+  height: 5.3rem;
+}
+
 .title-menu-container {
-  gap: 30px;
+  gap: 4.0rem;
   display: flex;
+}
+
+.icon-menu-image {
+  width: 25px;
+  height: 16px;
+  cursor: pointer;
 }
