@@ -100,6 +100,11 @@ const removeFiles = () => {
 }
 
 @media (max-width: 600px) {
+
+  .step-1 {
+    gap: 3.9rem;
+  }
+
   .txt-free-service {
     display: none;
   }

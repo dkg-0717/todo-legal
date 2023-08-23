@@ -27,3 +27,19 @@ header {
   height: 16px;
   cursor: pointer;
 }
+
+@media (max-width:600px) {
+
+  header {
+    padding: 1.9rem;
+    background: transparent;
+  }
+
+  .todo-legal-image {
+    max-width: 14.0rem;
+  }
+
+  .smart-image {
+    display: none;
+  }
+}
