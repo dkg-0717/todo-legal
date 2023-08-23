@@ -1,6 +1,6 @@
 const token = '61ea7c3c-d898-455a-97b0-0b49e73f7f3b'
-const webhookRequest = `https://webhook.site/token/${token}/requests`
-const webhookSite = `https://webhook.site/#!/${token}/c57731bb-65d7-4a82-8bcf-3c8dd70441ef/1`
+const webhookRequests = `https://webhook.site/token/${token}/requests`
+const webhookDashboard = `https://webhook.site/#!/${token}/c57731bb-65d7-4a82-8bcf-3c8dd70441ef/1`
 const url = `https://webhook.site/${token}`
 
 const options = {
