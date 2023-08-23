@@ -3,7 +3,7 @@
     <section class="section">
       <h1 class="txt-how-works txt-center">¿Cómo funciona?</h1>
       <img src="" alt="">
-      <p>Este es un servicio gratuito de <span class="txt-blue">todolegal</span></p>
+      <p class="txt-free-service txt-center">Este es un servicio gratuito de <span class="txt-blue">todolegal</span></p>
     </section>
     <section class="section">
       <p class="txt-upload-docs">Carga de Documentos</p>
@@ -42,16 +42,25 @@ console.log(index.value)
 }
 
 .txt-upload-docs {
-  font-size: 1.25rem;
+  font-size: 2.4rem;
   font-weight: bold;
+  color: var(--darkBlue);
 }
 
 .txt-docs-ordered {
+  font-size: 2.0rem;
   margin-block-start: 10px;
 }
 
 .txt-how-works {
-  font-size: 3rem;
+  margin: 0;
+  color: var(--blue);
+  font-size: 6.0rem;
+}
+
+.txt-free-service {
+  font-size: 2.8rem;
+  color: var(--minusLightGray);
 }
 
 .next-button {
@@ -59,10 +68,11 @@ console.log(index.value)
   color: #fff;
   display: block;
   cursor: pointer;
+  font-size: 2.4rem;
   font-weight: bold;
   border-radius: 8px;
-  background: blue;
-  padding: 20px 60px;
+  background: var(--lightBlueBtn);
+  padding: 25px 104px;
   margin-inline: auto;
   margin-block-start: 170px;
 }

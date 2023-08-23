@@ -1,11 +1,25 @@
 .fileupload_container {
-  padding: 20px 10px;
-  background: lightgray;
+  padding: 43px 10px;
+  background: var(--fuBgGray);
   display: flex;
   border-radius: 8px;
   margin-block-start: 80px;
   flex-direction: column;
-  border: 4px dashed blue;
+  border: 4px dashed var(--blueBorder);
   max-inline-size: 500px;
   margin-inline: auto;
+}
+
+.txt-drop-files {
+  font-size: 1.6rem;
+}
+
+.txt-find-files {
+  cursor: pointer;
+  color: var(--blueBorder);
+  text-decoration: underline;
+}
+
+.file {
+  display: none;
 }

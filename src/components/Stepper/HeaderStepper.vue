@@ -1,6 +1,6 @@
 <template>
   <section class="header-stepper">
-    <p>Firmar nuevo documento</p>
+    <p class="txt-sign-doc">Firmar nuevo documento</p>
     <ul class="stepper-list">
       <li v-for="(option, idx) in stepperOptions">
         <p class="step-circle" :class="{ 'step-active': index == idx }">

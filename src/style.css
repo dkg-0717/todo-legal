@@ -2,12 +2,27 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --fuBgGray: #F4F6FC;
+  --minusLightGray: #8E8E8E;
+  --lightGray: #5E5E5E;
+  --lightBlue: #3A77EC;
+  --blue: #187DFB;
+  --darkBlue: #002179;
+  --lightBlueBtn: #125BE9;
+  --blueBorder: #0037CB;
+}
+
 body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
   font-family: system-ui;
-  background: linear-gradient(#fff, #9198e5);
+  background: linear-gradient(#FAFAF8, #D8E3F2);
 }
 
 p {
@@ -15,7 +30,7 @@ p {
 }
 
 .txt-blue {
-  color: blue;
+  color: var(--blue);
 }
 
 .txt-light-gray {
