@@ -12,7 +12,9 @@
             v-show="hasFiles">
           Carga de Documentos
         </p>
-        <p class="txt-docs-ordered">Sube tus documentos y ordénalos</p>
+        <p class="txt-docs-ordered">Sube tus documentos y ordénalos
+        <p class="question-mark pointer">&#63;</p>
+        </p>
       </section>
       <FileUpload />
       <div class="buttons_container">
@@ -87,13 +89,16 @@ const saveData = async () => {
 .txt-upload-docs {
   gap: 1rem;
   display: flex;
-  cursor: pointer;
   font-size: 2.4rem;
   font-weight: bold;
+  align-items: center;
   color: var(--darkBlue);
 }
 
 .txt-docs-ordered {
+  gap: 1.0rem;
+  display: flex;
+  align-items: center;
   font-size: 2.0rem;
   margin-block-start: 10px;
 }
@@ -108,6 +113,18 @@ const saveData = async () => {
   font-size: 2.8rem;
   margin-block-start: 55px;
   color: var(--minusLightGray);
+}
+
+.question-mark {
+  color: #fff;
+  width: 2.0rem;
+  height: 2.0rem;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
 }
 
 @media (max-width: 900px) {
