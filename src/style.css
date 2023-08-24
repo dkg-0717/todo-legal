@@ -7,6 +7,7 @@ html {
 }
 
 :root {
+  --borderRadius: 1.6rem;
   --danger: #FF2B56;
   --borderGray: #DAE2EF;
   --fuBgGray: #F4F6FC;
@@ -64,7 +65,7 @@ p {
   cursor: pointer;
   font-size: 2.4rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
   background: var(--lightBlueBtn);
   padding: 25px 104px;
   margin-inline: auto;

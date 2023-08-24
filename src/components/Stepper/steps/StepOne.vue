@@ -61,7 +61,7 @@ const saveData = async () => {
 .section {
   padding: 25px 50px;
   background: #fff;
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
 }
 
 .section-1 {

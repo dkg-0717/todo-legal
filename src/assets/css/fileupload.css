@@ -3,7 +3,7 @@
   padding: 43px 10px;
   background: var(--fuBgGray);
   display: flex;
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
   margin-block-start: 80px;
   flex-direction: column;
   border: 4px dashed var(--blueBorder);
@@ -65,10 +65,15 @@
   gap: 3.0rem;
   display: grid;
   grid-template-columns: auto 1fr auto;
-  border-radius: 0.8rem;
+  border-radius: var(--borderRadius);
   align-items: center;
   background: #fff;
   padding: 1.0rem 4.0rem 1.0rem 2.2rem;
+}
+
+.pdf-file-item.add-new-file {
+  background: transparent;
+  border: 4px solid #fff;
 }
 
 .pdf-item-name {

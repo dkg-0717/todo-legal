@@ -18,7 +18,7 @@
         <p class="pdf-item-name">{{ file.name }}</p>
         <img class="trash-icon" src="../../../assets/images/trash-icon.png" @click="removeFile(index)" />
       </li>
-      <li class="pdf-file-item">
+      <li class="pdf-file-item add-new-file">
         <img src="../../../assets/images/plus-icon.svg" alt="">
         <button :class="{ 'txt-blue': files.length <= 5, 'txt-gray': files.length >= 5 }"
           class="txt-blue btn-add-new pointer" @click="inputRef" :disabled="files.length == 5">
