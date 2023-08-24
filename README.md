@@ -2,6 +2,11 @@
 
 This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
+## Install dependecies
+
+```shell script
+  npm install
+```
 ## run the project in local mode
 
 ```shell script
@@ -9,6 +14,12 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ```
 
 Go to ``http://localhost:5173``. You should see the main page.
+
+## Build production
+
+```shell script
+  npm run build
+```
 
 ### WebHook
 POST https://webhook.site/61ea7c3c-d898-455a-97b0-0b49e73f7f3b
