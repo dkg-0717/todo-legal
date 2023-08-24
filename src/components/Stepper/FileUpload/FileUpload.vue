@@ -51,17 +51,27 @@ watch(hasFiles, (newValue) => {
   }
 })
 
+const hasOtherFiles = (pdfFiles) => {
+  const hasOthers = pdfFiles.filter(file => file.type != 'application/pdf')
+  return hasOthers.length > 0 ? true : false
+}
+
+const getOnlyPdfFiles = (pdfFiles) => {
+  let onlyPdfs = pdfFiles.filter(file => file.type == 'application/pdf')
+  return onlyPdfs.filter((_, idx) => idx <= 4)
+}
+
 const filesSaved = (evtType, evt) => {
   evt.preventDefault();
   let pdfFiles = (evtType == 'drag') ? [...evt.dataTransfer.files] : [...evt.target.files]
-  const otherFiles = pdfFiles.filter(file => file.type != 'application/pdf')
-  if (otherFiles.length > 0) showAlert.value = true
-  pdfFiles = pdfFiles.filter(file => file.type == 'application/pdf')
+  const otherFiles = hasOtherFiles(pdfFiles)
+  if (otherFiles) showAlert.value = true
+  pdfFiles = getOnlyPdfFiles(pdfFiles)
   if (pdfFiles.length > 0) {
     stepperStore.setHasFiles(true)
     files.value = [...files.value, ...pdfFiles]
     files.value.forEach(file => {
-      console.log((file.size / (1024 * 1024)).toFixed(2))
+      // console.log((file.size / (1024 * 1024)).toFixed(2))
     })
     setTimeout(() => {
       showAlert.value = false
